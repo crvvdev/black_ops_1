@@ -1,0 +1,3 @@
+[submodule "cheat_render_framework"]
+	path = cheat_render_framework
+	url = https://github.com/crvvdev/cheat_render_framework
