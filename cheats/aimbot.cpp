@@ -1,4 +1,4 @@
-#include "includes.hpp"
+#include "..\includes.hpp"
 
 namespace Cheats
 {
@@ -37,8 +37,8 @@ int FindBestTarget()
         clientInfo_t *client = GetClientByIndex(i);
         centity_s *entity = GetEntityByIndex(i);
 
-        if (!entity || !client || !entity->Alive || !entity->Valid || client->clientNum == localClient->clientNum ||
-            entity->type != TYPE_HUMAN)
+        if (!entity || entity->type != TYPE_HUMAN || !client || !entity->Alive || !entity->Valid ||
+            client->clientNum == localClient->clientNum)
         {
             continue;
         }

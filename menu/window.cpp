@@ -1,4 +1,4 @@
-#include "includes.hpp"
+#include "..\includes.hpp"
 
 void CWindow::SetPosition(int x, int y)
 {

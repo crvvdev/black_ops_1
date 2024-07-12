@@ -1,4 +1,4 @@
-#include "includes.hpp"
+#include "..\includes.hpp"
 
 #pragma region Base Control
 void CControl::SetPosition(int x, int y)

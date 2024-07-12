@@ -1,4 +1,4 @@
-#include "includes.hpp"
+#include "..\includes.hpp"
 
 static constexpr char g_configFile[] = "C:\\ProgramData\\blackops_1.cfg";
 static constexpr char g_menuTitle[] = "T5MP BOT";

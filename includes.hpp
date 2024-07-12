@@ -23,27 +23,27 @@
 //	};
 // };
 
-#include "tools.hpp"
+#include "misc\tools.hpp"
 
 // 2d drawing
-#include "drawing.hpp"
+#include "draw\drawing.hpp"
 using namespace Drawing;
 
 // game engine
-#include "pointers.hpp"
-#include "classes.hpp"
-#include "math.hpp"
-#include "engine.hpp"
+#include "sdk\pointers.hpp"
+#include "sdk\classes.hpp"
+#include "sdk\math.hpp"
+#include "sdk\engine.hpp"
 
 // gui
-#include "options.hpp"
-#include "gui.hpp"
-#include "controls.hpp"
-#include "menu.hpp"
+#include "misc\options.hpp"
+#include "menu\gui.hpp"
+#include "menu\controls.hpp"
+#include "menu\menu.hpp"
 
 // cheats & others
 #include "hooks.hpp"
-#include "globals.hpp"
-#include "misc.hpp"
-#include "esp.hpp"
-#include "aimbot.hpp"
+#include "misc\globals.hpp"
+#include "cheats\misc.hpp"
+#include "cheats\esp.hpp"
+#include "cheats\aimbot.hpp"
