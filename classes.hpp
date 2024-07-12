@@ -398,7 +398,7 @@ class ViewMatrix
 
 }; // Size=0x043C
 
-inline ViewMatrix *viewMatrix = (ViewMatrix *)0xE7034C;
+inline ViewMatrix *viewMatrix = (ViewMatrix *)VIEWMATRIX;
 inline refdef_s *refdef = (refdef_s *)REFDEF;
 inline refdefViewAngles_t *refdefViewAngles = (refdefViewAngles_t *)RDVIEWANGLES;
 inline clientActive_t *clientActive = (clientActive_t *)USERCMDS;

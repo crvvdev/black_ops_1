@@ -4,8 +4,6 @@
 using namespace Hooks;
 bool g_minHookInitialized = false;
 
-
-
 bool InitializeD3D(DWORD_PTR **d3dDeviceVTable)
 {
     assert(d3dDeviceVTable);
@@ -65,13 +63,16 @@ DWORD WINAPI StartRoutine(LPVOID)
     MH_CreateHook(reinterpret_cast<PVOID>(d3dDeviceVTable[16]), &hkReset, reinterpret_cast<LPVOID *>(&oReset));
     MH_CreateHook(reinterpret_cast<PVOID>(d3dDeviceVTable[42]), &hkEndScene, reinterpret_cast<LPVOID *>(&oEndScene));
 
+    // R_EndFrame is the procedure which the game renders the current frame/scene
     MH_CreateHook(reinterpret_cast<PVOID>(R_ENDFRAME), &hkR_EndFrame, reinterpret_cast<LPVOID *>(&oR_EndFrame));
 
+    // CL_WritePacket is one of the procedures which the game process player input
     MH_CreateHook(reinterpret_cast<PVOID>(CL_WRITEPACKET), &hkCL_WritePacket,
                   reinterpret_cast<LPVOID *>(&oCL_WritePacket));
 
-   /* MH_CreateHook(reinterpret_cast<PVOID>(CG_PREDICTPLAYERSTATE), &hkCG_PredictPlayerState,
-                  reinterpret_cast<LPVOID *>(&oCG_PredictPlayerState));*/
+    // CG_PredictPlayerState is one of the procedures which the game process player input as well
+    /* MH_CreateHook(reinterpret_cast<PVOID>(CG_PREDICTPLAYERSTATE), &hkCG_PredictPlayerState,
+                   reinterpret_cast<LPVOID *>(&oCG_PredictPlayerState));*/
 
     MH_EnableHook(MH_ALL_HOOKS);
 

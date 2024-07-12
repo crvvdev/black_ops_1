@@ -191,7 +191,7 @@ void DrawBoundingBox3D(CBox &bbox, const Color &color)
                         color);
 }
 
-void RectangleEdge(float x, float y, float w, float h, float thickness, Color col)
+void RectangleEdge(float x, float y, float w, float h, float thickness, const Color &col)
 {
     float lineW = (w / 5);
     float lineH = (h / 6);
@@ -222,7 +222,7 @@ void RectangleEdge(float x, float y, float w, float h, float thickness, Color co
     g_renderer->AddLine(g_drawList, Vec2(x + w, y + h - lineH), Vec2(x + w, y + h), col);
 }
 
-void DrawBoneEsp(centity_s *Ent, Color col)
+void DrawBoneEsp(centity_s *Ent, const Color& col)
 {
     auto DrawBone = [&](centity_s *Ent, unsigned int BoneName1, unsigned int BoneName2) {
         vec3_t bonePos1{};
