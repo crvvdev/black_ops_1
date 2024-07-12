@@ -72,7 +72,7 @@ int FindBestTarget()
             // check if the shot can penetatre walls
             float multiplier = Engine::GetAutoWallDamageMultiplier(refdef->ViewOrigin, bonePos);
 
-            if (multiplier == 0.0 && !isVisible)
+            if (multiplier <= 0.0f && !isVisible)
             {
                 continue;
             }
